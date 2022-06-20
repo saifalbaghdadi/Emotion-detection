@@ -17,7 +17,6 @@ indicate a particular emotion.
 
 ![Emotions (GIF)](https://media.giphy.com/media/84rG9j2H62hwc/giphy.gif)
 
-Are you up to the mission?
 
 ### Must-have features
 
