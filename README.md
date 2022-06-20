@@ -46,9 +46,4 @@ or technologies adapted to the problem you are trying to solve.
 - Preprocessing of the images was done to improve detection.
 - Model was deployed using Streamlit, Flask, and/or Heroku.
 
-## A final note of encouragement
 
-_"The important thing is to not stop questioning. Curiosity has its own reason for existing."_
--Albert Einstein
-
-![Don't believe in defeat (GIF)](https://media.giphy.com/media/dUYddwtCVUOIpgXijq/giphy.gif)
