@@ -34,8 +34,20 @@ and putting text of its emotion on it.
 `Visualization` of Emotions present in the Image provided.
 - Finally creating a file which inherits form all the Classes defined by us and
 deploys our application using *Flask*.
+
+## Algorithm
+
+* First, the **haar cascade** method is used to detect faces in each frame of the webcam feed.
+
+* The region of image containing the face is resized to **48x48** and is passed as input to the CNN.
+
+* The network outputs a list of **softmax scores** for the seven classes of emotions.
+
+* The emotion with maximum score is displayed on the screen.
+
 ## Inside the app:
 ![Insid](templates/img/readp.png)
+
 ## Dependencies:
 
 * Python 3.9 , [OpenCV](https://opencv.org/), [Tensorflow](https://www.tensorflow.org/)
@@ -70,16 +82,6 @@ cd Emotion-detection
 
 ![Accuracy plot](templates/img/output2.png)
 ![Accuracy plot](templates/img/output.png)
-
-## Algorithm
-
-* First, the **haar cascade** method is used to detect faces in each frame of the webcam feed.
-
-* The region of image containing the face is resized to **48x48** and is passed as input to the CNN.
-
-* The network outputs a list of **softmax scores** for the seven classes of emotions.
-
-* The emotion with maximum score is displayed on the screen.
 
 ## Ideas:
 * Recognize feelings actually from the video, as well as from images, as well as from links.
