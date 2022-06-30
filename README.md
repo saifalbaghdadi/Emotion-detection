@@ -61,23 +61,24 @@ python app.py --mode display
 
 * The folder structure is of the form:  
   src:
-  * data (folder)
-  * Preprocessing (folder)
-  * * Preprocessing (file)
-  * model (folder)
-  * `model_weights.h5` (file)
-  * visual (folder)
-  * * data (file)
-  * * `haarcascade_frontalface_default.xml` (file)
-  * * data (visual)
-  * `emotions.py` (file)
-  * 
-  * `model.h5` (file)
+  * data
+  * Preprocessing
+  * * Preprocessing
+  * model
+  * * model.py
+  * `model_weights.h5`
+  * `model.json`
+  * visual
+  * * cascade
+  * * * `haarcascade_frontalface_default.xml`
+  * * Graphical_Visualisation.py
+  * * camera.py
+  * app.py (Run File)
 
 * This implementation by default detects emotions on all faces in the webcam feed. With a simple 4-layer CNN, the test accuracy reached 64% in 15 epochs.
 
-![Accuracy plot](templates/img/output.png)
 ![Accuracy plot](templates/img/output2.png)
+![Accuracy plot](templates/img/output.png)
 
 ## Data Preparation (optional)
 
