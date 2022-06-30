@@ -57,8 +57,8 @@ cd Emotion-detection
   * * Preprocessing
   * model
   * * model.py
-  * `model_weights.h5`
-  * `model.json`
+  * * `model_weights.h5`
+  * * `model.json`
   * visual
   * * cascade
   * * * `haarcascade_frontalface_default.xml`
