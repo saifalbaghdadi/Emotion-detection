@@ -85,6 +85,6 @@ cd Emotion-detection
 * Recognize feelings actually from the video, as well as from images, as well as from links.
 
 * Show a suggestion according to the type of feelings, for example, a text, a quote, a movie, or a music in order to change the person’s mood.
-* 
+
 ## Created by:
 * Saif Malkshahi
