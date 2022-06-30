@@ -43,8 +43,6 @@ deploys our application using *Flask*.
 
 ## Basic Usage
 
-The repository is currently compatible with `tensorflow-2.0` and makes use of the Keras API using the `tensorflow.keras` library.
-
 * First, clone the repository and enter the folder
 
 ```bash
