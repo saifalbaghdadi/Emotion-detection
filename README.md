@@ -1,11 +1,11 @@
 # Emotion Detection Project
-## Introduction
+## Introduction:
 Emotion Detection has always been an easy task for humans, but achieving the same task with a computer algorithm is quite challenging. With the recent advancement in computer vision and machine learning, it is possible to detect emotions from images.
 In this project, facial emotions can be recognized using convolutional neural networks, snake and flask.
 Facial expressions are the vital identifiers for human feelings, because it corresponds to the emotions. 
 Most of the times (roughly in 55% cases), the facial expression is a nonverbal way of emotional expression, and it can be considered as concrete evidence to uncover whether an individual is speaking the truth or not.
 
-## Mission objectives
+## Mission objectives:
 
 - Be able to analyze and classify images of faces according to the facial-expression.
 - Be able to analyze real-time images (video streaming) and implement facial-expression recognition.
@@ -35,8 +35,22 @@ and putting text of its emotion on it.
 - Finally creating a file which inherits form all the Classes defined by us and
 deploys our application using *Flask*.
 
+## Algorithm
 
-## Dependencies
+* First, the **haar cascade** method is used to detect faces in each frame of the webcam feed.
+
+* The region of image containing the face is resized to **48x48** and is passed as input to the CNN.
+
+* The network outputs a list of **softmax scores** for the seven classes of emotions.
+
+* The emotion with maximum score is displayed on the screen.
+
+* I added the suggestion feature, where a quote will appear to the user according to the type of his feelings.
+
+## Inside the app:
+![Insid](templates/img/readp.png)
+
+## Dependencies:
 
 * Python 3.9 , [OpenCV](https://opencv.org/), [Tensorflow](https://www.tensorflow.org/)
 * To install the required packages, run `pip install -r requirements.txt`.
@@ -70,16 +84,6 @@ cd Emotion-detection
 
 ![Accuracy plot](templates/img/output2.png)
 ![Accuracy plot](templates/img/output.png)
-
-## Algorithm
-
-* First, the **haar cascade** method is used to detect faces in each frame of the webcam feed.
-
-* The region of image containing the face is resized to **48x48** and is passed as input to the CNN.
-
-* The network outputs a list of **softmax scores** for the seven classes of emotions.
-
-* The emotion with maximum score is displayed on the screen.
 
 ## Ideas:
 * Recognize feelings actually from the video, as well as from images, as well as from links.
