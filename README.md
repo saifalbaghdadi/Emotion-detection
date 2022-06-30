@@ -48,7 +48,9 @@ deploys our application using *Flask*.
 * I added the suggestion feature, where a quote will appear to the user according to the type of his feelings.
 
 ## Inside the app:
-![Insid](templates/img/readp.png)
+![Insid1](templates/img/readp2.png)
+
+![Insid2](templates/img/readp.png)
 
 ## Dependencies:
 
