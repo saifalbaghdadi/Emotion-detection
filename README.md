@@ -1,4 +1,6 @@
-# Emotion detection
+# Emotion detection Project
+
+<img src=https://raw.githubusercontent.com/saifalbaghdadi/Emotion-detection/main/templates/img/1.jpg?token=GHSAT0AAAAAABTSUXQ62BES6QRGHNZGHI6KYV5XFNQ height="200">
 
 ## Mission objectives
 
