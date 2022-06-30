@@ -50,13 +50,6 @@ git clone https://github.com/saifalbaghdadi/Emotion-detection.git
 cd Emotion-detection
 ```
 
-* If you want to train this model, use:  
-
-```bash
-cd src
-python app.py --mode display
-```
-
 * The folder structure is of the form:  
   src:
   * data
