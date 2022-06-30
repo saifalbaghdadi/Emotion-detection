@@ -1,5 +1,6 @@
 # Emotion Detection Project
-- Emotion Detection has always been an easy task for humans, but achieving the same task with a computer algorithm is quite challenging. With the recent advancement in computer vision and machine learning, it is possible to detect emotions from images.
+## Introduction
+Emotion Detection has always been an easy task for humans, but achieving the same task with a computer algorithm is quite challenging. With the recent advancement in computer vision and machine learning, it is possible to detect emotions from images.
 In this project, facial emotions can be recognized using convolutional neural networks, snake and flask.
 Facial expressions are the vital identifiers for human feelings, because it corresponds to the emotions. 
 Most of the times (roughly in 55% cases), the facial expression is a nonverbal way of emotional expression, and it can be considered as concrete evidence to uncover whether an individual is speaking the truth or not.
@@ -33,47 +34,63 @@ and putting text of its emotion on it.
 `Visualization` of Emotions present in the Image provided.
 - Finally creating a file which inherits form all the Classes defined by us and
 deploys our application using *Flask*.
-<img src="[https://miro.medium.com/max/1864/1*oURfHMP1--ttXnDx0heusg.png](https://www.mdpi.com/sensors/sensors-20-02393/article_deploy/html/images/sensors-20-02393-g003.png)">
 
 
+## Dependencies
 
-## The Mission
+* Python 3, [OpenCV](https://opencv.org/), [Tensorflow](https://www.tensorflow.org/)
+* To install the required packages, run `pip install -r requirements.txt`.
 
-An important global firm receives thousands of job applications every year. However, the HR team does not have
-enough time to review each one of the applications. This is the reason why they are looking for innovative solutions
-to be integrated into the selection and recruitment process.
+## Basic Usage
 
-Looking to accelerate the interview pace, the company is investing resources in a video-interview system where pre-defined questions are asked by a virtual HR agent. In some jobs, personality is an important asset and the company would like to automatically analyze the images from the video footage, quantify the emotions expressed by the job applicants, and select the appropriate candidate according to the open job opportunities. They want to take it a step further, detecting a smile or sad face is not enough. They want a tool capable of recognizing even subtle changes in facial expression that might
-indicate a particular emotion.
+The repository is currently compatible with `tensorflow-2.0` and makes use of the Keras API using the `tensorflow.keras` library.
 
-![Emotions (GIF)](https://media.giphy.com/media/84rG9j2H62hwc/giphy.gif)
+* First, clone the repository and enter the folder
 
+```bash
+git clone https://github.com/saifalbaghdadi/Emotion-detection.git
+cd Emotion-detection
+```
 
-### Must-have features
+* If you want to train this model, use:  
 
-- As a minimum valuable product, the model should be able to identify human expressions such as happiness and sadness.
-- Explore ways to detect more complex emotions.
-- Deployment of the tool or integration with platforms is highly encouraged.
+```bash
+cd src
+python app.py --mode display
+```
 
-### Miscellaneous information
+* The folder structure is of the form:  
+  src:
+  * data (folder)
+  * Preprocessing (folder)
+  * * Preprocessing (file)
+  * model (folder)
+  * `model_weights.h5` (file)
+  * visual (folder)
+  * * data (file)
+  * * `haarcascade_frontalface_default.xml` (file)
+  * * data (visual)
+  * `emotions.py` (file)
+  * 
+  * `model.h5` (file)
 
-Some datasets are provided as initial material helpful to train or test your models. However, take the time to think
-about the limitations that might be attached to the provided data and explore the possibility of using more datasets
-or technologies adapted to the problem you are trying to solve.
+* This implementation by default detects emotions on all faces in the webcam feed. With a simple 4-layer CNN, the test accuracy reached 64% in 15 epochs.
 
-### Dataset
+![Accuracy plot](templates/img/output.png)
+![Accuracy plot](templates/img/output2.png)
 
-- [FER-2013](https://www.kaggle.com/msambare/fer2013)
+## Data Preparation (optional)
 
+* The [original FER2013 dataset in Kaggle](https://www.kaggle.com/datasets/msambare/fer2013) is available as a single csv file. I had converted into a dataset of images in the PNG format for training/testing and provided this as the dataset in the previous section.
 
-## Technical Evaluation criteria
+* In case you are looking to experiment with new datasets, you may have to deal with data in the csv format. I have provided the code I wrote for data preprocessing in the `dataset_prepare.py` file which can be used for reference.
 
-- Ability to recognize sadness and happiness in images.
-- Ability to recognize more complex emotions in images.
-- Ability to recognize emotions in videos.
-- A baseline model was established.
-- Appropiate metrics were used to evaluate the model.
-- Preprocessing of the images was done to improve detection.
-- Model was deployed using Streamlit, Flask, and/or Heroku.
+## Algorithm
 
+* First, the **haar cascade** method is used to detect faces in each frame of the webcam feed.
 
+* The region of image containing the face is resized to **48x48** and is passed as input to the CNN.
+
+* The network outputs a list of **softmax scores** for the seven classes of emotions.
+
+* The emotion with maximum score is displayed on the screen.
