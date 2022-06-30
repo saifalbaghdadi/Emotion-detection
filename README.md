@@ -45,6 +45,8 @@ deploys our application using *Flask*.
 
 * The emotion with maximum score is displayed on the screen.
 
+* I added the suggestion feature, where a quote will appear to the user according to the type of his feelings.
+
 ## Inside the app:
 ![Insid](templates/img/readp.png)
 
