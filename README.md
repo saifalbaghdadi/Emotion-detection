@@ -78,12 +78,6 @@ python app.py --mode display
 ![Accuracy plot](templates/img/output2.png)
 ![Accuracy plot](templates/img/output.png)
 
-## Data Preparation (optional)
-
-* The [original FER2013 dataset in Kaggle](https://www.kaggle.com/datasets/msambare/fer2013) is available as a single csv file. I had converted into a dataset of images in the PNG format for training/testing and provided this as the dataset in the previous section.
-
-* In case you are looking to experiment with new datasets, you may have to deal with data in the csv format. I have provided the code I wrote for data preprocessing in the `dataset_prepare.py` file which can be used for reference.
-
 ## Algorithm
 
 * First, the **haar cascade** method is used to detect faces in each frame of the webcam feed.
