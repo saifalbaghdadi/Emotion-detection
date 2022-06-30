@@ -11,6 +11,10 @@ Most of the times (roughly in 55% cases), the facial expression is a nonverbal w
 - Be able to analyze real-time images (video streaming) and implement facial-expression recognition.
 - Explore techniques to identify emotions from subtle movements or gestures on the face.
 
+## Dataset:
+- Download data from kaggle [kaggle](https://www.kaggle.com/datasets/msambare/fer2013).
+- The data consists of 48x48 pixel grayscale images of faces. The faces have been automatically registered so that the face is more or less centred and occupies about the same amount of space in each image.
+The task is to categorize each face based on the emotion shown in the facial expression into one of seven categories (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral). The training set consists of 28,709 examples and the public test set consists of 3,589 examples.
 
 ## Coding Structure:
 
