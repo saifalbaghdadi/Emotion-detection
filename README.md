@@ -1,12 +1,41 @@
-# Emotion detection Project
-
-<img src=https://raw.githubusercontent.com/saifalbaghdadi/Emotion-detection/main/templates/img/1.jpg?token=GHSAT0AAAAAABTSUXQ62BES6QRGHNZGHI6KYV5XFNQ height="200">
+# Emotion Detection Project
+- Emotion Detection has always been an easy task for humans, but achieving the same task with a computer algorithm is quite challenging. With the recent advancement in computer vision and machine learning, it is possible to detect emotions from images.
+In this project, facial emotions can be recognized using convolutional neural networks, snake and flask.
+Facial expressions are the vital identifiers for human feelings, because it corresponds to the emotions. 
+Most of the times (roughly in 55% cases), the facial expression is a nonverbal way of emotional expression, and it can be considered as concrete evidence to uncover whether an individual is speaking the truth or not.
 
 ## Mission objectives
 
 - Be able to analyze and classify images of faces according to the facial-expression.
 - Be able to analyze real-time images (video streaming) and implement facial-expression recognition.
 - Explore techniques to identify emotions from subtle movements or gestures on the face.
+
+
+## Coding Structure:
+
+- Import the required Packages and Libraries.
+- Data analysis and Creating Training and Validation Batches.
+- Create a CNN using 4 Convolutional Layers including *Batch Normalization*,
+*Activation*, *Max Pooling*, *Dropout* Layers followed by *Flatten* Layer, 2 Fully
+*Connected dense* Layers and finally Dense Layer with *SoftMax* Activation
+Function.
+- Compile the model using `Adam` Optimizer and categorical cross entropy
+loss function.
+- Training the model for 15 epochs and then Evaluating the model as well as
+saving the model Weights in `.h5` Values
+- Saving the model as `JSON` string.
+- Creating a Class in a separate file to reload the model and its weights to
+make predictions and return the probabilities of each emotion.
+- Creating one more class in a Separate file which takes in the `Real-time
+Video input` and returns frames of Images with a Circle detecting the face
+and putting text of its emotion on it.
+- A python script is also created which upon running yields the `Graphical`
+`Visualization` of Emotions present in the Image provided.
+- Finally creating a file which inherits form all the Classes defined by us and
+deploys our application using *Flask*.
+<img src="[https://miro.medium.com/max/1864/1*oURfHMP1--ttXnDx0heusg.png](https://www.mdpi.com/sensors/sensors-20-02393/article_deploy/html/images/sensors-20-02393-g003.png)">
+
+
 
 ## The Mission
 
