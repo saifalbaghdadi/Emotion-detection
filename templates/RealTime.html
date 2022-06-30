@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+  <link href="static/style.css"" rel=" stylesheet">
+  <style>
+     
+    .banner-text {
+        width: 100%;
+        z-index: 1;}
+    .banner-text ul {
+        height: 50px;
+        float: right;}
+    .banner-text ul li {
+        display: inline-block;
+        padding: 40px 15px;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 20px;}
+    .banner-text ul li:hover {
+        cursor: pointer;}
+    .banner-text h2 {
+        text-align: center;
+        color: #fff;
+        font-size: 50px;
+        margin-top: 20%;}
+    .animation-area {
+        background: linear-gradient(to left, #f1c1c1, #e4dddc);
+        width: 100%;
+        height: 100vh;}
+    .center {
+        justify-content: center;
+        align-items: center;
+        height: 200px;}
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;}
+    h1 {
+            text-align: center;
+            color: rgb(18, 194, 218)}
+    h3 {
+            text-align: center;
+            color: rgb(0, 107, 139);}
+    p {
+        text-align: center;}
+    div {
+        text-align: center;}
+    .mySlides {
+        display: none;}
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;}
+    .border {
+        border: 4px solid rgb(6, 6, 17);}
+  </style>
+  <title>Real Time Image Capture</title>
+</head>
+<body>
+  <div class="banner-text">
+    <div class="animation-area">
+      <h1>Capturing your Image !</h1>
+      <img class="border" src="{{ url_for('video_feed') }}"> 
+       <div class="center">
+        <form action="/takeimage" method="post">
+          <input type="submit" name="Click the Photo" value="Click the Image" class="button" />
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

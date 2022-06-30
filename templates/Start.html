@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+  <link href="static/style.css" rel="stylesheet">
+  <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;}
+    .banner-text {
+        width: 100%;
+
+        z-index: 1;}
+    .banner-text ul {
+        height: 50px;
+        float: right;}
+    .banner-text ul li {
+        display: inline-block;
+        padding: 40px 15px;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 20px;}
+    .banner-text ul li:hover {
+        cursor: pointer;}
+    .banner-text h2 {
+        text-align: center;
+        color: #fff;
+        font-size: 50px;
+        margin-top: 20%;}
+    .animation-area {
+        background: linear-gradient(to left, #bdbdbd, #e9cdcb);
+        width: 100%;
+        height: 100vh;}
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;}
+      img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;}
+      h1 {
+            text-align: center;
+            color: rgb(4, 76, 184)}
+        h3 {
+            text-align: center;
+            color: rgb(0, 107, 139);}
+      p {
+      text-align: center;}
+      div {
+      text-align: center;}
+    .mySlides {
+      display: none;}
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;}
+  </style>
+  <title>Facial Emotion Investigator</title>
+</head>
+
+<body>
+  <div>
+    <div class="animation-area">
+      <h1> Facial Emotion Investigator</h1>
+
+      <div class="SLIDESHOW">
+        <img class="mySlides" width=900px height=400px
+          src="https://user-images.githubusercontent.com/57671048/103117235-80cb3200-468f-11eb-93ca-766e6f42f5b1.jpg"
+          style="display:block">
+        <img class="mySlides" width=900px height=400px
+          src="https://www.apa.org/images/PSA-2011-05-matsumoto-fig1_tcm7-115934_w1024_n.jpg" style="display:block">
+      </div>
+
+
+      <div class="center">
+        <form action="/RealTime" method="post">
+          <input type="submit" name="Real Time Image" value="Real Time Image" class="button" />
+        </form>
+        <form action="/ManualUpload" method="post">
+          <input type="submit" name="Manually Upload Image" value="Manually Upload Image" class="button" />
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";}
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+  </script>
+</body>
+
+</html>
