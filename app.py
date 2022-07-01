@@ -156,7 +156,7 @@ def uploadimage():
 def imageurl():
     url = request.form['url']
     req = Request(url,
-                  headers={'User-Agent': 'chrome/5.0'})
+                  headers={'User-Agent': 'chrome/103.0'})
     # Reading and Saving it to the static Folder
     webpage = urlopen(req).read()
     arr = np.asarray(bytearray(webpage), dtype=np.uint8)
