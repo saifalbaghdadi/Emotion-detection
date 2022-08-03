@@ -27,7 +27,7 @@ Function.
 - Compile the model using `Adam` Optimizer and categorical cross entropy
 loss function.
 - Training the model for 15 epochs and then Evaluating the model as well as
-saving the model Weights in `.h5` Values
+saving the model Weights in `.h5` Values.
 - Saving the model as `JSON` string.
 - Creating a Class in a separate file to reload the model and its weights to
 make predictions and return the probabilities of each emotion.
